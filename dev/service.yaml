@@ -1,15 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: playground-service-v2
-  namespace: dev  # Namespace cible
+  name: playground-service
+  namespace: dev
 spec:
   selector:
-    app: playground-app  # Correspond au label de l'application
-    version: v2  # Spécifie la version v2
+    app: playground-app
   ports:
     - protocol: TCP
-      port: 80  # Port exposé à l'extérieur du service
-      targetPort: 8888  # Port interne de l'application
-  type: ClusterIP  # Accessible uniquement depuis le cluster
+      port: 80
+      targetPort: 8888
+  type: ClusterIP
 
