@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: playground-app
-        image: wil42/playground:v2  # Image Docker avec la version v1.0
+        image: wil42/playground:v1  # Image Docker avec la version v1.0
         ports:
         - containerPort: 8888  # Port exposé par l'application
