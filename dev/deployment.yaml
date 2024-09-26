@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: playground-app-v1
+  namespace: dev  # Namespace où sera déployée l'application
+  labels:
+    app: playground-app
+    version: v1
+spec:
+  replicas: 2  # Nombre de réplicas (pods)
+  selector:
+    matchLabels:
+      app: playground-app
+      version: v1
+  template:
+    metadata:
+      labels:
+        app: playground-app
+        version: v1
+    spec:
+      containers:
+      - name: playground-app
+        image: wil42/playground:v1.0  # Image Docker avec la version v1.0
+        ports:
+        - containerPort: 8888  # Port exposé par l'application
+
