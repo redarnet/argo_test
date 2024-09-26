@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: playground-app-v1
+  name: playground-app
   namespace: dev  # Namespace où sera déployée l'application
   labels:
     app: playground-app
